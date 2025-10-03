@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Bhandari | Interactive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+     
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA; 
+            color: #1f2937; 
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        .timeline-dot {
+            width: 2.2rem; 
+            height: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+        .hero-title {
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .stat-card {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) { animation-delay: 0.3s; }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-2xl">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-black text-indigo-700 tracking-widest border-b-2 border-indigo-400">SAKSHI</div>
+            <div class="hidden md:flex space-x-10 font-bold text-lg">
+                <a href="#skills" class="text-slate-700 hover:text-indigo-600 transition-all transform hover:scale-105">🛠️ Skills</a>
+                <a href="#projects" class="text-slate-700 hover:text-indigo-600 transition-all transform hover:scale-105">💡 Projects</a>
+                <a href="#journey" class="text-slate-700 hover:text-indigo-600 transition-all transform hover:scale-105">🚀 Journey</a>
+                <a href="#contact" class="text-slate-700 hover:text-indigo-600 transition-all transform hover:scale-105">📧 Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="pt-24 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-indigo-100 to-white relative overflow-hidden">
+            <div class="container mx-auto px-6 text-center z-10 relative">
+
+                <h1 class="hero-title text-6xl md:text-8xl font-black text-slate-900 leading-snug tracking-tighter">Sakshi Bhandari</h1>
+              
+                <p class="mt-4 text-2xl md:text-3xl font-extrabold text-indigo-700 tracking-wide">High-Impact Full-Stack Developer | DSA/OOP Specialist</p>
+                
+                <div class="mt-16 flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+                  
+                    <div class="stat-card opacity-0 w-full sm:w-auto flex-1 min-w-[180px] bg-white p-6 rounded-xl shadow-xl border-b-4 border-indigo-500 transition-all duration-300 hover:shadow-2xl hover:border-indigo-600">
+                        <p class="text-5xl font-black text-indigo-700">9.5+</p>
+                        <p class="mt-2 text-lg font-bold text-slate-800">Consistent CGPA</p>
+                    </div>
+                   
+                    <div class="stat-card opacity-0 w-full sm:w-auto flex-1 min-w-[180px] bg-white p-6 rounded-xl shadow-xl border-b-4 border-indigo-500 transition-all duration-300 hover:shadow-2xl hover:border-indigo-600">
+                        <p class="text-5xl font-black text-indigo-700">500+</p>
+                        <p class="mt-2 text-lg font-bold text-slate-800">Competitive Problems Solved</p>
+                    </div>
+                  
+                    <div class="stat-card opacity-0 w-full sm:w-auto flex-1 min-w-[180px] bg-white p-6 rounded-xl shadow-xl border-b-4 border-indigo-500 transition-all duration-300 hover:shadow-2xl hover:border-indigo-600">
+                        <p class="text-5xl font-black text-indigo-700">FULL</p>
+                        <p class="mt-2 text-lg font-bold text-slate-800">Stack Readiness</p>
+                    </div>
+                </div>
+
+                <div id="about-me" class="mt-20 max-w-5xl mx-auto text-slate-700 text-left bg-white p-10 rounded-2xl shadow-2xl border-l-8 border-indigo-600 transition-all duration-500 hover:shadow-3xl">
+                    <h3 class="text-3xl font-black text-slate-900 mb-4">My Drive & Expertise</h3>
+                    <p class="text-lg leading-relaxed">I am a driven Information Technology student focused on translating theoretical knowledge into scalable, real-world software solutions. My expertise lies in competitive programming and implementing robust applications across the full stack, from modern React.js frontends to Java and Node.js/Express.js backends. I am committed to continuous learning and delivering measurable results through high-quality code and problem-solving rigor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 bg-[#F8F9FA]">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-black text-center text-slate-900">Technical Skillset Mastery</h2>
+                <p class="text-center mt-3 text-slate-600 max-w-2xl mx-auto text-lg">A visual breakdown of my core competencies and the specific technologies mastered.</p>
+                <div class="mt-16">
+                    <div class="chart-container bg-white p-8 rounded-2xl shadow-2xl border border-slate-200">
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                </div>
+                <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div class="p-6 bg-white rounded-2xl text-center shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow transform hover:scale-[1.03]">
+                        <h3 class="font-extrabold text-2xl text-indigo-700 mb-2">Code Mastery</h3>
+                        <p class="text-slate-700 font-medium">C, C++, Java, Python</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl text-center shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow transform hover:scale-[1.03]">
+                        <h3 class="font-extrabold text-2xl text-indigo-700 mb-2">Web/Backend Stack</h3>
+                        <p class="text-slate-700 font-medium">React.js, Node.js, Express.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl text-center shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow transform hover:scale-[1.03]">
+                        <h3 class="font-extrabold text-2xl text-indigo-700 mb-2">Tools & Data</h3>
+                        <p class="text-slate-700 font-medium">SQL, Git, GitHub, VS Code, File I/O</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl text-center shadow-xl border-t-4 border-indigo-500 hover:shadow-2xl transition-shadow transform hover:scale-[1.03]">
+                        <h3 class="font-extrabold text-2xl text-indigo-700 mb-2">Foundations</h3>
+                        <p class="text-slate-700 font-medium">Data Structures & Algorithms (DSA), Object Oriented Programming (OOP), Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-black text-center text-slate-900">Featured Software Projects</h2>
+                <p class="text-center mt-3 text-slate-600 max-w-3xl mx-auto text-lg">These select projects highlight my ability to deliver functional, technically robust, and impactful software. Click to explore the details.</p>
+                <div id="project-grid" class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="py-24 bg-indigo-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-black text-center text-slate-900">Academic & Achievement Timeline</h2>
+                 <p class="text-center mt-3 text-slate-700 max-w-3xl mx-auto text-lg">A visual roadmap illustrating my growth trajectory, from key academic milestones to continuous skill validation.</p>
+                <div class="relative mt-20 max-w-3xl mx-auto">
+                  
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 h-full w-1.5 bg-indigo-300 rounded-full shadow-inner"></div>
+                    <div id="timeline-container" class="space-y-20">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer id="contact" class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-indigo-400">Let's Connect & Build Together</h2>
+            <p class="mt-3 text-slate-300 text-xl font-medium">I am actively seeking software development and engineering opportunities. Reach out via the channels below.</p>
+            <div class="mt-10 flex flex-col md:flex-row justify-center items-center space-y-5 md:space-y-0 md:space-x-10">
+               
+                <div class="relative group">
+                    <button id="email-copy-btn" class="text-xl font-bold bg-indigo-600 text-white px-10 py-4 rounded-xl shadow-xl hover:bg-indigo-500 transition-colors transform hover:scale-105 relative z-10">
+                        📧 bhandarisakshi234@gmail.com
+                    </button>
+                    
+                    <div id="email-tooltip" class="absolute top-[-45px] left-1/2 -translate-x-1/2 px-3 py-1 bg-slate-800 text-white text-sm rounded-md opacity-0 transition-opacity duration-300 pointer-events-none">
+                        Copied!
+                    </div>
+                   
+                    <a href="mailto:bhandarisakshi234@gmail.com" id="hidden-mailto-link" class="absolute inset-0 z-0"></a>
+                </div>
+                
+                <p class="text-xl font-bold bg-slate-700 text-white px-10 py-4 rounded-xl shadow-xl">
+                    📞 8261957209
+                </p>
+            </div>
+            <p class="mt-16 text-sm text-slate-500">Interactive Portfolio Design & Implementation © 2025 Sakshi Bhandari.</p>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-white rounded-2xl shadow-3xl p-8 max-w-3xl w-full relative transform transition-all duration-300 scale-95">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-slate-500 hover:text-indigo-700 text-4xl font-light leading-none">&times;</button>
+            <h3 id="modal-title" class="text-3xl font-extrabold text-indigo-700 border-b pb-2"></h3>
+            <p class="mt-2 text-md font-bold text-slate-600" id="modal-tech"></p>
+            <div class="mt-6 space-y-8 text-slate-700 border-t border-slate-200 pt-6">
+                <div>
+                    <h4 class="font-black text-2xl text-slate-800 mb-3 border-l-4 border-indigo-500 pl-3">Project Description:</h4>
+                    <p id="modal-description" class="text-lg leading-relaxed"></p>
+                </div>
+                <div>
+                    <h4 class="font-black text-2xl text-slate-800 mb-3 border-l-4 border-indigo-500 pl-3">Key Impact & Results:</h4>
+                    <p id="modal-impact" class="text-lg leading-relaxed"></p>
+                </div>
+                <div id="modal-links" class="flex flex-wrap gap-4 mt-6">
+                    
+
+                </div>
+               
+                <div id="modal-live-site-fallback" class="hidden mt-8 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg text-red-800">
+                    <p class="font-bold">⚠️ Desktop Access Restriction Warning:</p>
+                    <p class="text-sm mt-1">If the "Live Demo" button fails to open a new tab due to security settings, please manually copy the link below and paste it into your browser's address bar:</p>
+                    <code id="fallback-url" class="block mt-2 p-2 bg-red-100 rounded text-base font-mono break-all cursor-copy select-all"></code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const resumeData = {
+                skills: [
+                    { category: 'Programming', count: 4 },
+                    { category: 'Web/Backend', count: 7 },
+                    { category: 'Tools & DB', count: 5 }, 
+                    { category: 'Foundations', count: 3 }
+                ],
+                projects: [
+                    {
+                        title: "Generic Data Structures Library",
+                        tech: "C++, OOP, Data Structures",
+                        description: "Engineered a generic, reusable library providing high-performance implementations of major Linear and Non-Linear Data Structures (e.g., Stacks, Trees). This foundation is crucial for writing efficient algorithms.",
+                        impact: "Leveraged OOP principles (Inheritance, Polymorphism) to support operations across multiple data types, achieving significantly enhanced code reusability and scalability for fundamental components in larger software systems.",
+                        github: "https://github.com/BhandariSakshi/Projects/blob/main/Generic_Datastructures_Main.cpp", 
+                        liveSite: null
+                    },
+                    {
+                        title: "File Packer and Unpacker with Encryption",
+                        tech: "Java, File Handling, GUI",
+                        description: "Developed a robust application in Java designed to efficiently compress and decompress multiple files into a single, demonstrating expertise in low-level file manipulation.",
+                        impact: "Implemented robust File I/O and metadata management strategies to ensure data integrity during packing and unpacking. The project features a custom Graphical User Interface (GUI) for an enhanced user experience.",
+                        github: "https://github.com/BhandariSakshi/Projects/blob/main/Pack_Unpack.java", 
+                        liveSite: null
+                    },
+                    {
+                        title: "ShopLedger - Store Management System",
+                        tech: "React.js, JavaScript, Tailwind CSS, Frontend",
+                        description: "Built a fully responsive and intuitive frontend for a specialized store management system, designed to handle inventory and billing.",
+                        impact: "Designed dynamic, user-friendly modules for real-time inventory management, complex billing, and customer record tracking.",
+                        github: null,
+                        liveSite: "https://shop-ledger.onrender.com/"
+                    }
+                ],
+                journey: [
+                    {
+                        year: "2022 - 2026",
+                        title: "B.Tech in Information Technology",
+                        institution: "Walchand Institute of Technology, Solapur",
+                        icon: "🎓",
+                        side: "left"
+                    },
+                    {
+                        year: "Ongoing",
+                        title: "Academic Excellence (9.5+ CGPA)",
+                        institution: "Consistently maintained a top-tier academic standing, demonstrating diligence and mastery of core IT concepts.",
+                        icon: "🏆",
+                        side: "right"
+                    },
+                     {
+                        year: "Ongoing",
+                        title: "Competitive Programming Aptitude",
+                        institution: "Successfully solved 500+ coding problems on various platforms (e.g., GitHub), solidifying strong DSA and algorithm design proficiency.",
+                        icon: "💡",
+                        side: "left"
+                    },
+                    {
+                        year: "Certifications Completed",
+                        title: "Infosys Springboard Programs",
+                        institution: "Successfully completed certifications in Programming using Java, HTML, CSS, JavaScript, and ReactJS.",
+                        icon: "📜",
+                        side: "right"
+                    },
+                    {
+                        year: "2020 - 2022",
+                        title: "Higher Secondary Certificate (HSC)",
+                        institution: "Bhausaheb Firodiya Junior College, Ahilyanagar",
+                        icon: "🏫",
+                        side: "left"
+                    }
+                ]
+            };
+
+            const skillsChartCtx = document.getElementById('skillsChart').getContext('2d');
+            new Chart(skillsChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: resumeData.skills.map(s => s.category),
+                    datasets: [{
+                        label: 'Keywords Count',
+                        data: resumeData.skills.map(s => s.count),
+                       
+                        backgroundColor: [
+                            '#3b82f6', 
+                            '#f97316', 
+                            '#10b981', 
+                            '#ef4444'  
+                        ],
+                        borderColor: '#3730a3', 
+                        borderWidth: 1,
+                        borderRadius: 8,
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(55, 65, 81, 0.9)',
+                            titleFont: { size: 16 },
+                            bodyFont: { size: 14 },
+                            callbacks: {
+                                label: function(context) {
+                                    return ` Total Keywords: ${context.parsed.x}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 8,
+                            ticks: { stepSize: 1, font: { weight: 'bold' } },
+                            grid: { display: true, color: '#e5e7eb' }
+                        },
+                        y: {
+                             grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            const projectGrid = document.getElementById('project-grid');
+            resumeData.projects.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+               
+                projectCard.className = 'bg-white p-6 rounded-2xl shadow-xl border-t-4 border-indigo-400 flex flex-col transform transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl hover:border-indigo-600 hover:rotate-1';
+                projectCard.innerHTML = `
+                    <h3 class="text-2xl font-black text-slate-900">${project.title}</h3>
+                    <p class="mt-2 text-md font-bold text-indigo-600">${project.tech}</p>
+                    <div class="flex-grow mt-4 text-slate-700">${project.description.substring(0, 120)}...</div>
+                    <button data-index="${index}" class="view-details-btn mt-6 self-start bg-indigo-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-600 transition-colors transform hover:scale-[1.02]">Explore Project</button>
+                `;
+                projectGrid.appendChild(projectCard);
+            });
+            
+            const timelineContainer = document.getElementById('timeline-container');
+            const getIcon = (title) => {
+                if (title.includes("B.Tech")) return '📚';
+                if (title.includes("Excellence")) return '🏆';
+                if (title.includes("Competitive")) return '💡';
+                if (title.includes("Certifications")) return '📜';
+                if (title.includes("Secondary")) return '🏫';
+                return '✨';
+            };
+
+            resumeData.journey.forEach(item => {
+                const icon = getIcon(item.title);
+                const isLeft = item.side === 'left';
+                const containerClass = isLeft ? 'md:mr-auto' : 'md:ml-auto md:justify-end';
+                const contentClass = isLeft ? 'pr-8 md:pr-0 md:mr-12' : 'pl-8 md:pl-0 md:ml-12 text-right md:text-left'; // Adjusted 
+                
+                const timelineItem = document.createElement('div');
+                timelineItem.className = `relative flex w-full md:w-1/2 ${containerClass}`;
+
+                timelineItem.innerHTML = `
+                    <div class="absolute top-0 ${isLeft ? 'left-0 md:left-auto md:right-[-2.6rem]' : 'right-0 md:right-auto md:left-[-2.6rem]'} z-20 flex justify-center items-center h-full w-0.5">
+                        <div class="timeline-dot bg-indigo-700 text-white rounded-full border-6 border-indigo-50 shadow-md">${icon}</div>
+                    </div>
+                    <div class="w-full md:max-w-md ${contentClass}">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-200 transform transition-all hover:border-indigo-600 hover:shadow-xl">
+                             <p class="text-sm font-extrabold text-indigo-700 uppercase">${item.year}</p>
+                             <h3 class="mt-1 text-xl font-extrabold text-slate-900">${item.title}</h3>
+                             <p class="mt-2 text-slate-700">${item.institution}</p>
+                        </div>
+                    </div>
+                `;
+                timelineContainer.appendChild(timelineItem);
+            });
+
+            const modal = document.getElementById('project-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalTitle = document.getElementById('modal-title');
+            const modalTech = document.getElementById('modal-tech');
+            const modalDescription = document.getElementById('modal-description');
+            const modalImpact = document.getElementById('modal-impact');
+            const modalLinks = document.getElementById('modal-links');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const fallbackDiv = document.getElementById('modal-live-site-fallback');
+            const fallbackUrlCode = document.getElementById('fallback-url');
+            const emailCopyBtn = document.getElementById('email-copy-btn');
+            const emailTooltip = document.getElementById('email-tooltip');
+
+            const emailAddress = "bhandarisakshi234@gmail.com";
+            
+            emailCopyBtn.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                
+                const tempInput = document.createElement('textarea');
+                tempInput.value = emailAddress;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                try {
+                    document.execCommand('copy');
+                    emailTooltip.textContent = "Copied!";
+                } catch (err) {
+                    console.error('Copy failed:', err);
+                    emailTooltip.textContent = "Copy Failed";
+                }
+                document.body.removeChild(tempInput);
+
+                emailTooltip.classList.remove('opacity-0');
+                setTimeout(() => {
+                    emailTooltip.classList.add('opacity-0');
+                }, 1500);
+
+                window.location.href = `mailto:${emailAddress}`;
+            });
+
+
+            document.querySelectorAll('.view-details-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const projectIndex = e.target.getAttribute('data-index');
+                    const project = resumeData.projects[projectIndex];
+                    
+                    modalTitle.textContent = project.title;
+                    modalTech.textContent = project.tech;
+                    modalDescription.textContent = project.description;
+                    modalImpact.textContent = project.impact;
+
+                    modalLinks.innerHTML = ''; 
+                    fallbackDiv.classList.add('hidden'); 
+                    
+                    if (project.github) {
+                         modalLinks.innerHTML += `<a href="${project.github}" target="_blank" rel="noopener noreferrer" class="bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-slate-600 transition-colors flex items-center transform hover:scale-105">🔗 GitHub Repo</a>`;
+                    }
+                    
+                    if (project.liveSite) {
+                        const mlClass = project.github ? 'ml-4' : ''; 
+                       
+                        modalLinks.innerHTML += `<a href="${project.liveSite}" target="_blank" rel="noopener noreferrer" class="bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-600 transition-colors flex items-center transform hover:scale-105 ${mlClass}">🚀 Live Demo</a>`;
+                        
+                        
+                        fallbackUrlCode.textContent = project.liveSite;
+                        fallbackDiv.classList.remove('hidden');
+                    }
+
+
+                    modal.classList.remove('hidden', 'opacity-0');
+                    setTimeout(() => {
+                         modal.classList.add('opacity-100');
+                         modalContent.classList.remove('scale-95');
+                    }, 10);
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('opacity-100');
+                modalContent.classList.add('scale-95');
+                 setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
